@@ -1,0 +1,89 @@
+---
+name: TimedRenderer
+route: /TimedRenderer
+# menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import { TimedRenderer } from './TimedRenderer';
+
+<h1>TimedRenderer</h1>
+
+## Description
+
+A TimedRenderer can be used to render a component at timed intervals.
+
+Just provide the interval in milliseconds and a render prop, and the component will reliably render at the interval provided.
+
+Powered by [react-use-precision-timer](https://github.com/devboldly/react-use-precision-timer).
+
+## Usage
+
+<Playground>
+  <TimedRenderer
+    interval={1000}
+    render={time => (
+      <div>Rendered at: {time + ', ' + new Date(time).toString()}</div>
+    )}
+  />
+</Playground>
+
+<small>Note: You can edit the source above. Your changes will be rendered immediately.</small>
+
+<br/><br/>
+
+The render prop is provided with a single argument, the time at which the render occured in milliseconds since the epoch.
+
+## Props
+
+<Props of={TimedRenderer} />
+
+> Note: Expand each prop for more information.
+
+
+## Example
+
+The following example uses a TimedRenderer with a 500ms interval and renders a div with a random border radius, background color, inset box shadow, and a 0.5 second ease-in transition. 
+
+The effect is a dancing amorphous blob that changes shape and color every half second. His name is Edward. 
+
+Try changing the interval and transition below.
+
+<Playground>
+  <TimedRenderer
+    interval={500}
+    render={time => (
+      <div
+        style={{
+          width: `140px`,
+          height: `100px`,
+          transition: `all 0.5s ease-in`,
+          borderRadius: `${Math.floor(Math.random() * 101)}% ${Math.floor(
+            Math.random() * 101,
+          )}% ${Math.floor(Math.random() * 101)}% ${Math.floor(
+            Math.random() * 101,
+          )}% / ${Math.floor(Math.random() * 101)}% ${Math.floor(
+            Math.random() * 101,
+          )}% ${Math.floor(Math.random() * 101)}% ${Math.floor(
+            Math.random() * 101,
+          )}%`,
+          backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(
+            16,
+          )}`,
+          boxShadow: `inset 0 0 0 5px #${Math.floor(
+            Math.random() * 16777215,
+          ).toString(16)}`,
+        }}
+      />
+    )}
+  />
+</Playground>
+
+<small>Note: You can edit the source above. Your changes will be rendered immediately.</small>
+
+#### Example CSS Explanation
+
+Here's a quick explanation of the random number generation happening in the CSS:
+
+- `borderRadius` takes eight percentages in the format `x% x% x% x% / x% x% x% x%`, where `x` is a random number from `0` to `100`. This gives it the amorphous shape. Who knew `borderRadius` could do so much?
+- `backgroundColor` and `boxShadow` both use `Math.floor(Math.random() * 16777215).toString(16)` to generate random hex color values.

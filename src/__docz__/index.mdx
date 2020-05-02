@@ -1,9 +1,6 @@
 ---
 name: Home
 route: /
-# menu: MenuName
-
-# NOTE: Menu ordering is configured in doczrc.js
 ---
 
 import { Playground } from 'docz';
@@ -16,45 +13,62 @@ import githubSvg from '../__docz__/images/github.svg';
 	alignItems: 'center',
 }}>
   <div>
-    <h1>React Library Starter</h1>
+    <h1>React Timed Renderer</h1>
   </div>
   <div>
-    <a href="https://github.com/devboldly/react-library-starter" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/devboldly/react-timed-renderer/" target="_blank" rel="noopener noreferrer">
       <SvgIcon src={githubSvg} size={28} style={{ margin: '0 0 0 20px' }} />
     </a>
   </div>
 </div>
 
-**This header will contain a brief description of the project.**
+**React component that re-renders at the interval provided.**
 
-👁️ **[Live Demo](/ExampleComponent#example)**
+👁️ **[Live Demo](/TimedRenderer#example)**
 
 ## Overview
 
-This section will contain an overview so people can have a high-level understanding of the project.
+A component that re-renders at regular intervals.
+
+Just provide the interval in milliseconds and a render prop.
+
+The built-in [precision timer](https://github.com/devboldly/react-use-precision-timer) will handle the rest!
 
 ### Features include:
 
-- **🚀 List your features, use fun [emojis](https://emojipedia.org/search/?q=rocket)**
-  - Give a little more info on each feature or mention benefits.
+- **🙌 Simple and easy**
+  - Render components at timed intervals with ease.
+- **🎯 Precise timing**
+  - Underlying timer is both accurate and precise.
+- **🧰 Versatile**
+  - A useful tool to have in your React toolkit.
 
 ## Installation
 
 ```
-npm i @devboldly/react-library-starter
+npm i react-timed-renderer
 ```
 
 ## Quick Start
 
-This section will contain a copy/paste example so people can get started quickly.
-
 ```jsx
-import { ExampleComponent } from '@devboldly/react-library-starter';
+import { TimedRenderer } from 'react-timed-renderer';
 ```
 
 ```jsx
-<ExampleComponent text="Example Component"/>
+<TimedRenderer
+  interval={1000}
+  render={time => (
+    <div>Rendered at: {time}</div>
+  )}
+/>
 ```
+
+Provide an interval in milliseconds and a render prop. 
+
+The render prop receives a single argument, which is the time (in milliseconds) at which the render occurred, in case that's useful to you.
+
+See the [demo](/TimedRenderer#example) for an interactive example using CSS transitions.
 
 ## TypeScript
 
@@ -68,6 +82,6 @@ For major changes, open an issue first to discuss what you'd like to change.
 
 See the [library template](https://tinyurl.com/ya3k258d) for npm script documentation.
 
-## ⭐ Found It Helpful? [Star It!](https://github.com/devboldly/react-library-starter/stargazers)
+## ⭐ Found It Helpful? [Star It!](https://github.com/devboldly/react-timed-renderer/stargazers)
 
-If you found this project helpful, let the community know by giving it a [star](https://github.com/devboldly/react-library-starter/stargazers): [👉⭐](https://github.com/devboldly/react-library-starter/stargazers)
+If you found this project helpful, let the community know by giving it a [star](https://github.com/devboldly/react-timed-renderer/stargazers): [👉⭐](https://github.com/devboldly/react-timed-renderer/stargazers)
