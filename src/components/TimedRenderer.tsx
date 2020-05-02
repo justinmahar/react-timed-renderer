@@ -21,7 +21,7 @@ export interface TimedRendererProps {
  *
  * Just provide the interval in milliseconds and a render prop, and the component will reliably render at the interval provided.
  *
- * Powered by [react-use-precision-timer](https://github.com/devboldly/react-use-precision-timer).
+ * Powered by [react-use-precision-timer](https://devboldly.github.io/react-use-precision-timer/).
  */
 export function TimedRenderer(props: TimedRendererProps): JSX.Element {
   const [time, setTime] = React.useState(new Date().getTime());
