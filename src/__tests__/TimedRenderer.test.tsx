@@ -2,9 +2,6 @@ import { render, RenderResult } from '@testing-library/react';
 import React from 'react';
 import { TimedRenderer, TimedRendererProps } from '../components/TimedRenderer';
 
-// Learn how to test React components:
-// https://testing-library.com/docs/react-testing-library/intro
-
 function renderComponent(props: TimedRendererProps, children: React.ReactNode = undefined): RenderResult {
   return render(<TimedRenderer {...props}>{children}</TimedRenderer>);
 }
