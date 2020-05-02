@@ -3,21 +3,21 @@ export interface TimedRendererProps {
     /** Time between renders in milliseconds. Defaults to 5000 (5 seconds). */
     interval?: number;
     /**
-     * Renders the JSX element. Optional. Time parameter (in milliseconds since the epoch) for the start of each period is provided for convenience.
-     * Will be rendered as the first child.
+     * Renders the JSX element. Time parameter (in milliseconds since the epoch) for the start of each period is provided for convenience.
+     *
      * @param time The time for the beginning of each period in milliseconds since the epoch.
      * @returns The JSX element to render, or undefined.
      */
     render?: (time: number) => JSX.Element;
-    /**
-     * Children to render. Optional.
-     */
-    children?: any;
 }
 /**
- * Renders a component at fixed intervals.
+ * See documentation: https://devboldly.github.io/react-timed-renderer/TimedRenderer
  *
- * @param props Props for the `interval` and `render` function.
+ *  A TimedRenderer can be used to render a component at timed intervals.
+ *
+ * Just provide the interval in milliseconds and a render prop, and the component will reliably render at the interval provided.
+ *
+ * Powered by [react-use-precision-timer](https://devboldly.github.io/react-use-precision-timer/).
  */
 export declare function TimedRenderer(props: TimedRendererProps): JSX.Element;
 export declare namespace TimedRenderer {
