@@ -15,7 +15,7 @@ export interface TimedRendererProps {
 }
 
 /**
- * See documentation: https://devboldly.github.io/react-timed-renderer/TimedRenderer
+ * See documentation: [TimedRenderer](https://devboldly.github.io/react-timed-renderer/TimedRenderer)
  *
  *  A TimedRenderer can be used to render a component at timed intervals.
  *
