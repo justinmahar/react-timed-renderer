@@ -8,9 +8,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
-var react_use_timer_1 = require("@devboldly/react-use-timer");
+var react_use_precision_timer_1 = require("react-use-precision-timer");
 /**
- * See documentation: https://devboldly.github.io/react-timed-renderer/TimedRenderer
+ * See documentation: [TimedRenderer](https://devboldly.github.io/react-timed-renderer/TimedRenderer)
  *
  *  A TimedRenderer can be used to render a component at timed intervals.
  *
@@ -25,7 +25,7 @@ function TimedRenderer(props) {
     var callback = function () {
         setTime(new Date().getTime());
     };
-    react_use_timer_1.useTimer({ delay: delay, startImmediately: startImmediately, callback: callback });
+    react_use_precision_timer_1.useTimer({ delay: delay, startImmediately: startImmediately, callback: callback });
     return React.createElement(React.Fragment, null, props.render ? props.render(time) : undefined);
 }
 exports.TimedRenderer = TimedRenderer;
