@@ -3,7 +3,7 @@
   "version": "1.0.6",
   "author": "DevBoldly <devboldly@gmail.com>",
   "description": "React component that re-renders at the interval provided.",
-  "homepage": "https://github.com/devboldly/react-timed-renderer#readme",
+  "homepage": "https://devboldly.github.io/react-timed-renderer/",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
