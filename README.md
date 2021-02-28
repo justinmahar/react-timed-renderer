@@ -1,5 +1,5 @@
 <h2 align="center">
-  <a href="https://github.com/devboldly/react-timed-renderer">React Timed Renderer</a>
+  <a href="https://github.com/justinmahar/react-timed-renderer">React Timed Renderer</a>
 </h2>
 <h3 align="center">
   React component that re-renders at the interval provided.
@@ -8,21 +8,21 @@
   <a href="https://badge.fury.io/js/react-timed-renderer">
     <img src="https://badge.fury.io/js/react-timed-renderer.svg" alt="npm Version"/>
   </a>
-  <a href="https://github.com/devboldly/react-timed-renderer/actions?query=workflow%3ATests">
-    <img src="https://github.com/devboldly/react-timed-renderer/workflows/Tests/badge.svg" alt="Tests Status"/>
+  <a href="https://github.com/justinmahar/react-timed-renderer/actions?query=workflow%3ATests">
+    <img src="https://github.com/justinmahar/react-timed-renderer/workflows/Tests/badge.svg" alt="Tests Status"/>
   </a>
-  <a href="https://github.com/devboldly/react-timed-renderer/actions?query=workflow%3ADeploy">
-    <img src="https://github.com/devboldly/react-timed-renderer/workflows/Deploy/badge.svg" alt="Deploy Status"/>
+  <a href="https://github.com/justinmahar/react-timed-renderer/actions?query=workflow%3ADeploy">
+    <img src="https://github.com/justinmahar/react-timed-renderer/workflows/Deploy/badge.svg" alt="Deploy Status"/>
   </a>
 </p>
 
 ## Documentation
 
-Read the **[official documentation](https://devboldly.github.io/react-timed-renderer/)**.
+Read the **[official documentation](https://justinmahar.github.io/react-timed-renderer/)**.
 
-[![Demo](./src/__docz__/images/demo.gif "Demo")](https://devboldly.github.io/react-timed-renderer/TimedRenderer#example)
+[![Demo](./src/__docz__/images/demo.gif "Demo")](https://justinmahar.github.io/react-timed-renderer/TimedRenderer#example)
 
-👁️ **[Live Demo](https://devboldly.github.io/react-timed-renderer/TimedRenderer#example)**
+👁️ **[Live Demo](https://justinmahar.github.io/react-timed-renderer/TimedRenderer#example)**
 
 ## Overview
 
@@ -30,7 +30,7 @@ A component that re-renders at regular intervals.
 
 Just provide the interval in milliseconds and a render prop.
 
-The built-in [precision timer](https://devboldly.github.io/react-use-precision-timer/) will handle the rest!
+The built-in [precision timer](https://justinmahar.github.io/react-use-precision-timer/) will handle the rest!
 
 ### Features include:
 
@@ -50,23 +50,21 @@ npm i react-timed-renderer
 ## Quick Start
 
 ```jsx
-import { TimedRenderer } from 'react-timed-renderer';
+import { TimedRenderer } from "react-timed-renderer";
 ```
 
 ```jsx
 <TimedRenderer
   interval={1000}
-  render={time => (
-    <div>Rendered at: {time}</div>
-  )}
+  render={(time) => <div>Rendered at: {time}</div>}
 />
 ```
 
-Provide an interval in milliseconds and a render prop. 
+Provide an interval in milliseconds and a render prop.
 
 The render prop receives a single argument, which is the time (in milliseconds) at which the render occurred, in case that's useful to you.
 
-See the [demo](https://devboldly.github.io/react-timed-renderer/TimedRenderer#example) for an interactive example using CSS transitions.
+See the [demo](https://justinmahar.github.io/react-timed-renderer/TimedRenderer#example) for an interactive example using CSS transitions.
 
 ## TypeScript
 
@@ -86,14 +84,14 @@ For major changes, open an issue first to discuss what you'd like to change.
 
 See [Kindling](https://tinyurl.com/kindlingscripts) for npm script documentation.
 
-## ⭐ Found It Helpful? [Star It!](https://github.com/devboldly/react-timed-renderer/stargazers)
+## ⭐ Found It Helpful? [Star It!](https://github.com/justinmahar/react-timed-renderer/stargazers)
 
-If you found this project helpful, let the community know by giving it a [star](https://github.com/devboldly/react-timed-renderer/stargazers): [👉⭐](https://github.com/devboldly/react-timed-renderer/stargazers)
+If you found this project helpful, let the community know by giving it a [star](https://github.com/justinmahar/react-timed-renderer/stargazers): [👉⭐](https://github.com/justinmahar/react-timed-renderer/stargazers)
 
 ## MIT License
 
 ```
-Copyright © 2020 DevBoldly https://devboldly.com
+Copyright © 2020 Justin Mahar https://github.com/justinmahar
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
