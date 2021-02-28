@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { useTimer } from "react-use-precision-timer";
+import { useTimer } from 'react-use-precision-timer';
 
 export interface TimedRendererProps {
   /** Time between renders in milliseconds. Defaults to 5000 (5 seconds). */

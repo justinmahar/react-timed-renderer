@@ -12,7 +12,7 @@ export default {
 
 // The named exports define the stories
 export const UsingDefaultInterval = () => (
-  <TimedRenderer render={time => <>The time in milliseconds is {time}. This will rerender in 5 seconds.</>} />
+  <TimedRenderer render={(time) => <>The time in milliseconds is {time}. This will rerender in 5 seconds.</>} />
 );
 UsingDefaultInterval.story = {
   name: 'Using Default Interval (5 Seconds)',
@@ -21,7 +21,7 @@ UsingDefaultInterval.story = {
 export const UsingCustomInterval = () => (
   <TimedRenderer
     interval={1000}
-    render={time => <>The time in milliseconds is {time}. This will rerender in 1 second.</>}
+    render={(time) => <>The time in milliseconds is {time}. This will rerender in 1 second.</>}
   />
 );
 UsingCustomInterval.story = {
