@@ -1,6 +1,6 @@
 {
   "name": "react-timed-renderer",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "Justin Mahar <contact@justinmahar.com>",
   "description": "React component that re-renders at the interval provided.",
   "homepage": "https://justinmahar.github.io/react-timed-renderer/",
