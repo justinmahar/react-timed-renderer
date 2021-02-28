@@ -23,20 +23,22 @@ Powered by [react-use-precision-timer](https://justinmahar.github.io/react-use-p
 import { TimedRenderer } from "react-timed-renderer";
 ```
 
-<Playground>
-  <TimedRenderer
-    interval={1000}
-    render={(time) => (
-      <div>Rendered at: {time + ", " + new Date(time).toString()}</div>
-    )}
-  />
-</Playground>
-<small>
-  Note: You can edit the source above. Your changes will be rendered
-  immediately.
-</small>
-<br />
-<br />
+<div>
+  <Playground>
+    <TimedRenderer
+      interval={1000}
+      render={(time) => (
+        <div>Rendered at: {time + ", " + new Date(time).toString()}</div>
+      )}
+    />
+  </Playground>
+  <small>
+    Note: You can edit the source above. Your changes will be rendered
+    immediately.
+  </small>
+  <br />
+  <br />
+</div>
 
 The render prop is provided with a single argument, the time at which the render occured in milliseconds since the epoch.
 
@@ -54,39 +56,41 @@ The effect is a dancing amorphous blob that changes shape and color every half s
 
 Try changing the interval and transition below.
 
-<Playground>
-  <TimedRenderer
-    interval={500}
-    render={(time) => (
-      <div
-        style={{
-          width: `140px`,
-          height: `100px`,
-          transition: `all 0.5s ease-in`,
-          borderRadius: `${Math.floor(Math.random() * 101)}% ${Math.floor(
-            Math.random() * 101
-          )}% ${Math.floor(Math.random() * 101)}% ${Math.floor(
-            Math.random() * 101
-          )}% / ${Math.floor(Math.random() * 101)}% ${Math.floor(
-            Math.random() * 101
-          )}% ${Math.floor(Math.random() * 101)}% ${Math.floor(
-            Math.random() * 101
-          )}%`,
-          backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(
-            16
-          )}`,
-          boxShadow: `inset 0 0 0 5px #${Math.floor(
-            Math.random() * 16777215
-          ).toString(16)}`,
-        }}
-      />
-    )}
-  />
-</Playground>
-<small>
-  Note: You can edit the source above. Your changes will be rendered
-  immediately.
-</small>
+<div>
+  <Playground>
+    <TimedRenderer
+      interval={500}
+      render={(time) => (
+        <div
+          style={{
+            width: `140px`,
+            height: `100px`,
+            transition: `all 0.5s ease-in`,
+            borderRadius: `${Math.floor(Math.random() * 101)}% ${Math.floor(
+              Math.random() * 101
+            )}% ${Math.floor(Math.random() * 101)}% ${Math.floor(
+              Math.random() * 101
+            )}% / ${Math.floor(Math.random() * 101)}% ${Math.floor(
+              Math.random() * 101
+            )}% ${Math.floor(Math.random() * 101)}% ${Math.floor(
+              Math.random() * 101
+            )}%`,
+            backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(
+              16
+            )}`,
+            boxShadow: `inset 0 0 0 5px #${Math.floor(
+              Math.random() * 16777215
+            ).toString(16)}`,
+          }}
+        />
+      )}
+    />
+  </Playground>
+  <small>
+    Note: You can edit the source above. Your changes will be rendered
+    immediately.
+  </small>
+</div>
 
 #### Example CSS Explanation
 
