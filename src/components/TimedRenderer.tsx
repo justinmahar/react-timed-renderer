@@ -14,31 +14,25 @@ export interface TimedRendererProps {
   render?: (time: number) => JSX.Element;
 }
 
+const emptyRender = (time: number): JSX.Element => {
+  return <></>;
+};
+
 /**
  * See documentation: [TimedRenderer](https://justinmahar.github.io/react-timed-renderer/TimedRenderer)
  *
- *  A TimedRenderer can be used to render a component at timed intervals.
+ * A TimedRenderer can be used to render a component at timed intervals.
  *
  * Just provide the interval in milliseconds and a render prop, and the component will reliably render at the interval provided.
  *
  * Powered by [react-use-precision-timer](https://justinmahar.github.io/react-use-precision-timer/).
  */
-export function TimedRenderer(props: TimedRendererProps): JSX.Element {
+export function TimedRenderer({ interval = 5000, render = emptyRender }: TimedRendererProps): JSX.Element {
   const [time, setTime] = React.useState(new Date().getTime());
-
-  const delay = props.interval ? Math.max(0, props.interval) : 5000;
-  const startImmediately = true;
-  const callback = (): void => {
+  const delay = Math.max(0, interval);
+  const callback = React.useCallback(() => {
     setTime(new Date().getTime());
-  };
-  useTimer({ delay, startImmediately, callback });
-
-  return <>{props.render ? props.render(time) : undefined}</>;
+  }, []);
+  useTimer({ delay, startImmediately: true }, callback);
+  return render(time);
 }
-
-TimedRenderer.defaultProps = {
-  interval: 5000,
-  render: () => {
-    return undefined;
-  },
-};

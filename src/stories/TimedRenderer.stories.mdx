@@ -1,0 +1,72 @@
+import { Meta } from '@storybook/addon-docs';
+import { Demo } from '../components/Demo';
+
+<Meta title="Docs/TimedRenderer" />
+
+<h1>TimedRenderer</h1>
+
+## Description
+
+A TimedRenderer can be used to render a component at timed intervals.
+
+Just provide the interval in milliseconds and a render prop, and the component will reliably render at the interval provided.
+
+Powered by [react-use-precision-timer](https://justinmahar.github.io/react-use-precision-timer/).
+
+## Usage
+
+```jsx
+import { TimedRenderer } from 'react-timed-renderer';
+```
+
+```jsx
+<TimedRenderer interval={1000} render={(time) => <div>Rendered at: {time + ', ' + new Date(time).toString()}</div>} />
+```
+
+The render prop is provided with a single argument, the time at which the render occured in milliseconds since the Unix epoch.
+
+## Props
+
+| Prop     | Type                            | Description                                                                                                                              |
+| -------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| interval | `string`                        | Time between renders in milliseconds. Defaults to 5000 (5 seconds).                                                                      |
+| render   | `(time: number) => JSX.Element` | Renders the JSX element. Time parameter (in milliseconds since the Unix epoch) for the start of each period is provided for convenience. |
+
+All props are optional.
+
+## Example
+
+The following example uses a TimedRenderer with a 500ms interval and renders a div with a random border radius, background color, inset box shadow, and a 0.5 second ease-in transition.
+
+The effect is a dancing amorphous blob that changes shape and color every half second. His name is Henry.
+
+<Demo />
+
+```jsx
+<TimedRenderer
+  interval={500}
+  render={(time) => (
+    <div
+      style={{
+        width: `140px`,
+        height: `100px`,
+        transition: `all 0.5s ease-in`,
+        borderRadius: `${Math.floor(Math.random() * 101)}% ${Math.floor(Math.random() * 101)}% ${Math.floor(
+          Math.random() * 101,
+        )}% ${Math.floor(Math.random() * 101)}% / ${Math.floor(Math.random() * 101)}% ${Math.floor(
+          Math.random() * 101,
+        )}% ${Math.floor(Math.random() * 101)}% ${Math.floor(Math.random() * 101)}%`,
+        backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
+        boxShadow: `inset 0 0 0 5px #${Math.floor(Math.random() * 16777215).toString(16)}`,
+      }}
+    />
+  )}
+/>
+```
+
+#### Example CSS Explanation
+
+Here's a quick explanation of the random number generation happening in the CSS:
+
+- `borderRadius` takes eight percentages in the format `x% x% x% x% / x% x% x% x%`, where `x` is a random number from `0` to `100`. This gives it the amorphous shape. Who knew `borderRadius` could do so much?
+- `backgroundColor` and `boxShadow` both use `Math.floor(Math.random() * 16777215).toString(16)` to generate random hex color values.

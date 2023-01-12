@@ -1,1 +1,1 @@
-export * from './components/TimedRenderer';
+export * from './components/Example';
