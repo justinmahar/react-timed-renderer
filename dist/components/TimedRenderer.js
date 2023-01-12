@@ -30,7 +30,7 @@ const emptyRender = (time) => {
     return React.createElement(React.Fragment, null);
 };
 /**
- * See documentation: [TimedRenderer](https://justinmahar.github.io/react-timed-renderer/TimedRenderer)
+ * See documentation: [TimedRenderer](https://justinmahar.github.io/react-timed-renderer/?path=/story/docs-timedrenderer--page)
  *
  * A TimedRenderer can be used to render a component at timed intervals.
  *

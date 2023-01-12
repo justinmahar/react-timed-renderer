@@ -11,7 +11,7 @@ export interface TimedRendererProps {
     render?: (time: number) => JSX.Element;
 }
 /**
- * See documentation: [TimedRenderer](https://justinmahar.github.io/react-timed-renderer/TimedRenderer)
+ * See documentation: [TimedRenderer](https://justinmahar.github.io/react-timed-renderer/?path=/story/docs-timedrenderer--page)
  *
  * A TimedRenderer can be used to render a component at timed intervals.
  *
