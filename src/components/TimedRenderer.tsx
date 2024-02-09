@@ -1,6 +1,5 @@
 import * as React from 'react';
-
-import { useTimer } from 'react-use-precision-timer';
+import { Subs } from 'react-sub-unsub';
 
 export interface TimedRendererProps {
   /** Time between renders in milliseconds. Defaults to 5000 (5 seconds). */
@@ -24,15 +23,13 @@ const emptyRender = (time: number): JSX.Element => {
  * A TimedRenderer can be used to render a component at timed intervals.
  *
  * Just provide the interval in milliseconds and a render prop, and the component will reliably render at the interval provided.
- *
- * Powered by [react-use-precision-timer](https://justinmahar.github.io/react-use-precision-timer/).
  */
 export function TimedRenderer({ interval = 5000, render = emptyRender }: TimedRendererProps): JSX.Element {
   const [time, setTime] = React.useState(new Date().getTime());
-  const delay = Math.max(0, interval);
-  const callback = React.useCallback(() => {
-    setTime(new Date().getTime());
-  }, []);
-  useTimer({ delay, startImmediately: true }, callback);
+  React.useEffect(() => {
+    const subs = new Subs();
+    subs.setInterval(() => setTime(new Date().getTime()), Math.max(0, interval));
+    return subs.createCleanup();
+  }, [interval]);
   return render(time);
 }
