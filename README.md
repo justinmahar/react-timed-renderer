@@ -19,9 +19,9 @@
 
 Read the **[official documentation](https://justinmahar.github.io/react-timed-renderer/)**.
 
-[![Demo](https://justinmahar.github.io/react-timed-renderer/demo.gif "Demo")](https://justinmahar.github.io/react-timed-renderer/?path=/story/docs-timedrenderer--page#example)
+[![Demo](https://justinmahar.github.io/react-timed-renderer/demo.gif "Demo")](https://justinmahar.github.io/react-timed-renderer/?path=/story/docs-timedrenderer--docs#example)
 
-👁️ **[Live Demo](https://justinmahar.github.io/react-timed-renderer/?path=/story/docs-timedrenderer--page#example)**
+👁️ **[Live Demo](https://justinmahar.github.io/react-timed-renderer/?path=/story/docs-timedrenderer--docs#example)**
 
 ## Overview
 
@@ -86,7 +86,7 @@ Provide an `interval` in milliseconds and a `render` prop.
 
 The `render` prop receives a single argument, which is the time (in Unix milliseconds) at which the render occurred, in case that's useful to you.
 
-See the [demo](https://justinmahar.github.io/react-timed-renderer/?path=/story/docs-timedrenderer--page#example) for an example using CSS transitions.
+See the [demo](https://justinmahar.github.io/react-timed-renderer/?path=/story/docs-timedrenderer--docs#example) for an example using CSS transitions.
 
 <!-- [lock:typescript] 🚫--------------------------------------- -->
 
@@ -122,4 +122,4 @@ If you found this project helpful, let the community know by giving it a [star](
 
 ## License
 
-See [LICENSE.md](https://justinmahar.github.io/react-timed-renderer/?path=/story/license--page).
+See [LICENSE.md](https://justinmahar.github.io/react-timed-renderer/?path=/docs/license--docs).

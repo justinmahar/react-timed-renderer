@@ -18,7 +18,7 @@ const emptyRender = (time: number): JSX.Element => {
 };
 
 /**
- * See documentation: [TimedRenderer](https://justinmahar.github.io/react-timed-renderer/?path=/story/docs-timedrenderer--page)
+ * See documentation: [TimedRenderer](https://justinmahar.github.io/react-timed-renderer/?path=/story/docs-timedrenderer--docs)
  *
  * A TimedRenderer can be used to render a component at timed intervals.
  *
